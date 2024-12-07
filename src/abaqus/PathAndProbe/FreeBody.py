@@ -1,10 +1,10 @@
 from __future__ import annotations
 
-from typing_extensions import Literal
+from typing_extensions import Dict, Literal, Tuple
 
 from abqpy.decorators import abaqus_class_doc, abaqus_method_doc
 
-from ..UtilityAndView.abaqusConstants import CENTROID, NORMAL_TANGENTIAL
+from ..UtilityAndView.abaqusConstants import CENTROID, NORMAL_TANGENTIAL, OFF, Boolean
 from ..UtilityAndView.abaqusConstants import abaqusConstants as C
 
 
@@ -144,3 +144,38 @@ class FreeBody:
             A FreeBody object.
         """
         ...
+
+    @abaqus_method_doc
+    def getFreeBodyData(
+        self,
+        step: int = 0,
+        frame: int = 0,
+        allActiveStepFrame: Boolean = OFF,
+    ) -> Tuple[Tuple[Dict, ...], ...]:
+        """This method returns the force and moment data of a FreeBody object.
+
+        .. note::
+            This function can be accessed by::
+
+                session.freeBodies[name].getFreeBodyData
+
+        .. versionadded:: 2025
+            The ``getFreeBodyData`` method was added.
+
+        Parameters
+        ----------
+        step
+            An Int specifying the step from which to obtain values. The default value is the current step.
+        frame
+            An Int specifying the frame from which to obtain values. The default value is the current frame.
+        allActiveStepFrame
+            A Boolean specifying whether to obtain the values from the specified step and frame or from all active steps
+            and frames.
+
+        Returns
+        -------
+        tuple of tuple of dict
+            A tuple of tuples of dictionaries, for each requested step and frame, containing the force and moment data.
+        """
+        ...
+        return ()
