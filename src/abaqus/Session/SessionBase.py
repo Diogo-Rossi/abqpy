@@ -79,9 +79,6 @@ class SessionBase:
             session
     """
 
-    #: This function can be accessed by: session.View
-    View = View
-
     #: A Boolean specifying whether an Abaqus interactive session is running.
     attachedToGui: Boolean = OFF
 
@@ -297,6 +294,9 @@ class SessionBase:
 
     #: A repository of Drawing objects.
     drawings: dict[str, Drawing] = {}
+
+    #: This function can be accessed by: session.View
+    View = View
 
     @abaqus_method_doc
     def setValues(self, kernelMemoryLimit: float | None = None):
