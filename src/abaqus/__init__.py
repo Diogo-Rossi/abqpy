@@ -24,6 +24,7 @@ from .UtilityAndView.User import *  # noqa
 
 session = Session()
 mdb = Mdb()
+version = "2025"
 
 backwardCompatibility = BackwardCompatibility()
 
