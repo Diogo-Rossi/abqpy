@@ -294,7 +294,7 @@ class SessionBase:
 
     #: A repository of Drawing objects.
     drawings: dict[str, Drawing] = {}
-    
+
     @abaqus_method_doc
     def View(
         self,
