@@ -12,6 +12,7 @@ from abaqus.UtilityAndView.abaqusConstants import (
     EXPLICIT_PHASE,
     HEADING,
     HEALER_JOB,
+    HEALER_PHASE,
     HEALER_TYPE,
     INTERRUPTED,
     ITERATION,
