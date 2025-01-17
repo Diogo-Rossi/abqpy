@@ -81,7 +81,7 @@ class SessionBase:
 
     #: This function can be accessed by: session.View
     View = View
-    
+
     #: A Boolean specifying whether an Abaqus interactive session is running.
     attachedToGui: Boolean = OFF
 
