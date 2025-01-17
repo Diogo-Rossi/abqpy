@@ -29,10 +29,3 @@ sphinx:
   configuration: docs/source/conf.py
 
 formats: []
-
-python:
-  install:
-    - method: pip
-      path: .
-      extra_requirements:
-        - docs
