@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import Sequence, Union, overload
+from typing import List, Sequence, Union, overload
 
 from typing_extensions import Literal
 
@@ -81,7 +81,7 @@ class FieldOutput:
     isEngineeringTensor: Boolean = OFF
 
     #: A sequence of FieldBulkData objects.
-    bulkDataBlocks: list[FieldBulkData]
+    bulkDataBlocks: List[FieldBulkData]
 
     @overload
     @abaqus_method_doc
